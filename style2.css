@@ -1,0 +1,120 @@
+/* ======== RESET ======== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ======== FUNDO DA PÁGINA ======== */
+body {
+    background: linear-gradient(135deg, #6a00ff, #b200ff);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #222;
+}
+
+/* ======== CONTAINER DO QUIZ ======== */
+#quiz-container {
+    background: white;
+    width: 350px;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 0 25px rgba(0,0,0,0.2);
+    animation: fadeIn 0.6s ease;
+}
+
+/* Título da pergunta */
+#question {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+/* ======== BOTÕES ======== */
+#options button {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 8px;
+    background-color: #7f00ff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+/* Hover padrão */
+#options button:hover {
+    background-color: #9a33ff;
+}
+
+/* Correto */
+.correct {
+    background-color: #4caf50 !important;
+    color: white !important;
+}
+
+/* Errado */
+.wrong {
+    background-color: #ff3b3b !important;
+    color: white !important;
+}
+
+/* Desabilitado após clique */
+#options button:disabled {
+    opacity: 0.7;
+    cursor: default;
+}
+
+/* Feedback final */
+#options h3 {
+    margin-top: 20px;
+    font-size: 22px;
+}
+
+/* ======== ANIMAÇÕES ======== */
+.fade {
+    animation: fade 0.4s ease;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.96);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* ======== RESPONSIVIDADE ======== */
+@media (max-width: 400px) {
+    #quiz-container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    #question {
+        font-size: 18px;
+    }
+
+    #options button {
+        font-size: 15px;
+    }
+}
