@@ -13,7 +13,7 @@ const quiz = [
     {
         pergunta: "Quanto é 2 + ANA?",
         opcoes: ["Sim", "six", "seven", "Bolsonaro"],
-        correta: 2
+        correta: 3
     }
 ];
 
